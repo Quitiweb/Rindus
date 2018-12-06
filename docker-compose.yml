@@ -2,7 +2,12 @@ version: '3'
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        requirements: requirements/development.txt
+    environment:
+      - DJANGO_SETTINGS_MODULE=djangodocker.settings.development
     command: python /code/rindus/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
