@@ -14,4 +14,4 @@ COPY requirements/ /code/requirements/
 RUN pip install -r $requirements && \
   python /code/rindus/manage.py collectstatic --noinput
 
-CMD ["python", "rindus/manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["python", "rindus/manage.py", "runserver", "127.0.0.1:8000"]
