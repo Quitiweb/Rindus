@@ -2,10 +2,14 @@ version: '3'
 
 services:
   web:
-    build: .
-    command: python /code/rindus/manage.py runserver 0.0.0.0:8000
+    build:
+      context: .
+      args:
+        requirements: requirements/development.txt
+    environment:
+      - DJANGO_SETTINGS_MODULE=rindus.settings.development
     volumes:
-      - .:/code
+      - ./:/code
     ports:
       - 8000:8000
     depends_on:

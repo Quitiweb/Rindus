@@ -1,5 +1,5 @@
 # Rindus
-Django CRUD App with PostgreSQL
+A Django CRUD App with PostgreSQL
 
-Rindus SuperUser: Rindus
-Password: pass4r1ndus
+Rindus SuperUser: <b>Rindus</b><br/>
+Password: <b>pass4r1ndus</b>

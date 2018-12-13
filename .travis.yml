@@ -1,0 +1,12 @@
+sudo: required
+dist: trusty
+
+services:
+- docker
+
+install:
+- docker-compose pull
+- docker-compose build
+
+script:
+- docker-compose run -e DJANGO_SETTINGS_MODULE=rindus.settings.testing --no-deps --rm web /bin/sh -c 'cd rindus; py.test'

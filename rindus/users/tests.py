@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+class TestUsersSimple:
+    def test_one(self):
+        x = "my users simple test"
+        assert 'users' in x
